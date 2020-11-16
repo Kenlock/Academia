@@ -225,6 +225,9 @@ class QuizController extends Controller
         $paginate_count = 9;
         $categories = Category::where('is_active', 1)->get();
 
+        // $quizzes = Quiz::all();
+        // dd($quizzes);
+
         $category_search = $request->input('category_id');
         // return $category_search . "this is it pancit";
         $prices = $request->input('price_id');
@@ -300,6 +303,7 @@ class QuizController extends Controller
         }
 
         $quizzes = $query->groupBy('quizzes.id')->paginate($paginate_count);
+        // dd($quizzes);
 
         return view('site.quiz.list', compact('quizzes', 'categories'));
         // return "this page is under construction";

@@ -1,3 +1,5 @@
+![Image for the Academix](/github_images/homepage.png)
+
 # Academia / SG Academy / Academix
 
 A simple Online Learning Management System based on the discontinued "ULearn Pro".

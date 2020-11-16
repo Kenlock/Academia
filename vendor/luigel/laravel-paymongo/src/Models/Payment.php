@@ -45,11 +45,10 @@ class Payment
         $this->id = $data['id'];
         $this->type = $data['type'];
         $this->amount = floatval($data['attributes']['amount'] / 100);
-        // $this->billing_address = $data['attributes']['billing']['address'];
-        // $this->billing_email = $data['attributes']['billing']['email'];
-        // $this->billing_name = $data['attributes']['billing']['name'];
-        // $this->billing_phone_number = $data['attributes']['billing']['phone'];
-        // use this shits for the billing address in the future
+        $this->billing_address = $data['attributes']['billing']['address'];
+        $this->billing_email = $data['attributes']['billing']['email'];
+        $this->billing_name = $data['attributes']['billing']['name'];
+        $this->billing_phone_number = $data['attributes']['billing']['phone'];
         $this->currency = $data['attributes']['currency'] ?? 'PHP';
         $this->description = $data['attributes']['description'];
         $this->fee = floatval($data['attributes']['fee'] / 100);
